@@ -35,8 +35,11 @@
             .good{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAA9ElEQVQ4y2P4//8/AzUxw6Ay0GG/A4vlFu8SEAaxKTIQbNg2r1WWW73+g/EW79UgMeoYhsAzSDYsdFUoM1DjSiyG/bfa6vWIZMOAmlZgMwyI/1hs8wwHK7TY7qEAFDhhsdXrOFCDPC7DgBqW4zEsGhwpUMMeIEnet9nsK0eOYWADQS7Douiu6U43WaQwW0aMYfgMBOE7IO8D6aXEGobLy8j4OymGwRO22SZfRaCihzg0E20YSk6x2eKtBEpHlBiGkfVAhgI1PSbXMKx52WqbpzIWQ4kyDGfhYLnDXQXJUKINw1vagGLfYot3j/lWL9ehW8BiwwA8jA6GeQxGVAAAAABJRU5ErkJggg==);}
             .bad{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAqklEQVQ4y7WVSxKDIBBE+0DmINnk0J7BpSZZewNXI00BhRXRSdku2gU0r5wPA8wM1Bd4foAhqB+BLq+3RA+9PMOzeT1+3sArbCxBljRPwKMF4x49lX8hIwLTn9WwQ+gOrEDJQgrTGtpAD2BZA1Ie7AzqgFF9Tu6ZcfZ4yPKGYp4oSpUvQjd59lbQBfsB/gndbat7gdKQpUWRto28seVXTz4c5ONLPmDVT8AKvHEh2mU9JE0AAAAASUVORK5CYII=);}
         </style>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/1.0.1/shim.js"></script>
+
+        <!-- IE11 fix -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/promiz/1.0.4/promiz.js"></script>
         <script src="mscrypto-adapter/mscrypto-adapter.js"></script>
+
         <script>
             window.TESTBYTES = new Uint8Array([1, 2, 3, 4]);
 
