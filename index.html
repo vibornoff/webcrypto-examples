@@ -37,11 +37,16 @@
             .bad{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAqklEQVQ4y7WVSxKDIBBE+0DmINnk0J7BpSZZewNXI00BhRXRSdku2gU0r5wPA8wM1Bd4foAhqB+BLq+3RA+9PMOzeT1+3sArbCxBljRPwKMF4x49lX8hIwLTn9WwQ+gOrEDJQgrTGtpAD2BZA1Ie7AzqgFF9Tu6ZcfZ4yPKGYp4oSpUvQjd59lbQBfsB/gndbat7gdKQpUWRto28seVXTz4c5ONLPmDVT8AKvHEh2mU9JE0AAAAASUVORK5CYII=);}
         </style>
 
-        <!-- IE11 fix -->
+        <!-- IE11 WebCrypto adapter -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/promiz/1.0.4/promiz.js"></script>
         <script src="mscrypto-adapter/mscrypto-adapter.js"></script>
 
         <script>
+            window.crypto = window.crypto || window.msCrypto; //for IE11
+            if(window.crypto.webkitSubtle){
+                window.crypto.subtle = window.crypto.webkitSubtle; //for Safari
+            }
+
             window.TESTBYTES = new Uint8Array([1, 2, 3, 4]);
 
             //shortcuts to insert test results into the table
